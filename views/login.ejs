@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Enable Profiler</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/login" method="post">
+                <p>Login</p>
+<%          if(error.invalid){ %>
+                <p class="error"><%= error.invalid %></p>
+<%          } %>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email" id="email">
+<%                  if(error.email){ %>
+                        <p class="error"><%= error.email %></p>
+<%                  } %>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+<%                  if(error.password){ %>
+                        <p class="error"><%= error.password %></p>
+<%                  } %>
+                </div>
+                <input type="submit" value="Login" class="btn">
+
+            </form>
+            <form action="/register" method="post">
+                <p>Register</p>
+<%          if(error.taken){ %>
+                    <p class="error"><%= error.taken %></p>
+<%          } %>
+                <div>
+                    <label for="first_name">First name:</label>
+                    <input type="text" name="first_name" id="first_name">
+<%                  if(error.first_name){ %>
+                        <p class="error"><%= error.first_name %></p>
+<%                  } %>
+                </div>
+                <div>
+                    <label for="last_name">Last name:</label>
+                    <input type="text" name="last_name" id="last_name">
+<%                  if(error.last_name){ %>
+                        <p class="error"><%= error.last_name %></p>
+<%                  } %>
+                </div>
+                <div>
+                    <label for="email">Email address:</label>
+                    <input type="text" name="r_email" id="email">
+<%                  if(error.r_email){ %>
+                        <p class="error"><%= error.r_email %></p>
+<%                  } %>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="r_password" id="password">
+<%                  if(error.r_password){ %>
+                        <p class="error"><%= error.r_password %></p>
+<%                  } %>
+                </div>
+                <div>
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" name="confirm_password" id="confirm_password">
+<%                  if(error.confirm_password){ %>
+                        <p class="error"><%= error.confirm_password %></p>
+<%                  } %>
+                </div>
+                <input type="submit" value="Register" class="btn">
+            </form>
+        </div>
+    </body>
+</html>

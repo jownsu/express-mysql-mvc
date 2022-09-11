@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <p class="welcome" >Welcome <span><%= user.first_name %>!</span></p>
+            <div class="card">
+                <div>
+                    <p class="label">First name: </p>
+                    <p><%= user.first_name %></p>
+                </div>
+                <div>
+                    <p class="label">Last name: </p>
+                    <p><%= user.last_name %></p>
+                </div>
+                <div>
+                    <p class="label">Email address: </p>
+                    <p><%= user.email %></p>
+                </div>
+            </div>
+            <a href="/logout" class="btn-red">Log off</a>
+        </div>
+    </body>
+</html>
